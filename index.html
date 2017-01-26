@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<!--Import Google Icon Font-->
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+			<!-- Import Roboto Font -->
+			<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+			<!--Import materialize.css-->
+			<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+			<!-- Custom Stylesheet -->
+			<link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+			<link rel="stylesheet" href="css/clock.css">
+
+
+			<!--Let browser know website is optimized for mobile-->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>Revamp 2K17</title>
+		</head>
+
+		<body class="cool">
+		<!-- Loading -->
+		<div class="progress">
+		    <div class="indeterminate"></div>
+		</div>
+		<!-- Navbar -->
+		<nav>
+		  <div class="nav-wrapper">
+		    <a href="#!" class="brand-logo"><img src="images/header.png" alt="Revamp Logo" class="responsive-img rlogo"></a>
+		    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		    <ul class="right hide-on-med-and-down">
+		    	<li  class="active"><a href="#">Home</a></li>
+		    	<li><a href="events.html">Events</a></li>
+		    	<li><a href="reg.html">Register</a></li>
+		    	<li><a href="rules.html">Rules</a></li>
+		    	<li><a href="team.html">Team</a></li>
+				<li><a href="contact.html">Contact</a></li>
+		       </ul>
+		    <ul class="side-nav" id="mobile-demo">
+		    <li class="active"><a href="#">Home</a></li>
+		    	<li><a href="events.html">Events</a></li>
+		    	<li><a href="reg.html">Register</a></li>
+		    	<li><a href="rules.html">Rules</a></li>
+		    	<li><a href="team.html">Team</a></li>
+				<li><a href="contact.html">Contact</a></li>
+		    </ul>
+		  </div>
+		</nav>
+		<video playsinline autoplay muted loop id="bgvid" class="hide-on-med-and-down">
+		    <source src="images/background.webm" type="video/webm">
+		    <source src="images/background.mp4" type="video/mp4">
+		</video>
+
+		<div class="container">
+			<div class="row valign-wrapper">
+			<div class="col m3 hide-on-small-only">
+				<a class="waves-effect waves-light btn-large" href="events.html">Events</a>
+			</div>
+			<div class="col m6">	
+				<!-- <img src="images/logo.png" alt="Revamp Logo" class="responsive-img revamp-logo zoomIn rotateIn"> -->
+				<ul id="scene" class="revamp-logo">
+				  <li class="layer" data-depth="0.00"><img src="images/4.png" class="responsive-img"></li>
+				  <li class="layer" data-depth="0.20"><img src="images/10.png" class="responsive-img"></li>
+				  <li class="layer" data-depth="0.60"><img src="images/17.png" class="responsive-img"></li>
+				  <li class="layer" data-depth="1.00"><img src="images/18.png" class="responsive-img"></li>
+				</ul>
+			</div>
+			<div class="col m3 hide-on-small-only">
+				<a class="waves-effect waves-light btn-large" href="reg.html">Register</a>
+			</div>
+			</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col s6 hide-on-med-and-up">
+						<a class="waves-effect waves-light btn-large" href="events.html">Events</a>
+					</div>
+					<div class="col s6 hide-on-med-and-up">
+						<a class="waves-effect waves-light btn-large" href="reg.html">Register</a>
+					</div>
+				</div>
+			</div>
+
+		<div class="container">
+
+			<center>	
+				
+				<div id="myCounter"></div>
+			</center>
+		</div>
+
+
+
+
+	 <footer class="page-footer footer">
+		    <div class="footer-copyright">
+		      <div class="container">
+		      <div class="row flow-text">
+		      	<div class="left-align" style="display: inline-block; font-size:14px;">Like us on
+				<a href="https://facebook.com/revamp2k17" target="_blank">Facebook @Revamp2k17</a>
+				</div>
+				<div style="display: inline-block; font-size:14px;">&nbsp; 2017
+				<a href="https://facebook.com/krishnacollege" target="_blank">Krishna Engineering College</a>
+				</div>
+		      	
+		      	 <div style="display: inline-block; float: right; font-size:16px;" class="hide-on-small-only">
+				Made By<a href="http://anujsh.com" target="_blank"> Anuj Sharma</a> &amp; <a href="http://satishpadnani.com/my" target="_blank"> Satish Padnani</a>
+		      	 </div>
+		      	</div>
+		      	<div class="row hide-on-med-and-up">
+      		      	 <div style="display: inline-block; font-size:16px;">
+      				Made By<a href="http://anujsh.com" target="_blank" class="center-text"> Anuj Sharma</a> &amp; <a href="http://satishpadnani.com/my" target="_blank"> Satish Padnani</a>
+      		      	 </div>
+		      	</div>
+		      </div>
+		    </div>
+		  </footer>
+			<!--Import jQuery before materialize.js-->
+			<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+			<script type="text/javascript" src="js/materialize.min.js"></script>
+			<script type="text/javascript" src="js/custom.js"></script>
+			<script type="text/javascript" src="js/parallax.js"></script>
+			<script>
+				var scene = document.getElementById('scene');
+				var parallax = new Parallax(scene);
+			</script>
+			<script src="js/clock.js"></script>
+			<script>
+				$(function(){
+					//Countdown Timer
+					$('#myCounter').mbComingsoon({
+					expiryDate: new Date('February 17, 2017'),
+					interval: 1000,       // Counter uopdate interval
+					speed: 500         
+					}); 
+				});
+			</script>
+
+		</body>
+	</html>

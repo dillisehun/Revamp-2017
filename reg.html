@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<!--Import Google Icon Font-->
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+			<!-- Import Roboto Font -->
+			<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+			<!--Import materialize.css-->
+			<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+			<!-- Custom Stylesheet -->
+			<link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+
+			<!--Let browser know website is optimized for mobile-->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>Register | Revamp 2K17</title>
+			<style>
+				.tabs .tab a, .tabs .tab a:hover {
+				    color: #000000;
+				}
+				.tabs .tab a{
+					font-size: 20px;
+				}
+				.tabs .tab a.active{
+					border: solid 2px black;
+				}
+
+			</style>
+		</head>
+
+		<body>
+		<!-- Loading -->
+		<div class="progress">
+		    <div class="indeterminate"></div>
+		</div>
+		<!-- Navbar -->
+		<nav>
+		  <div class="nav-wrapper">
+		    <a href="index.html" class="brand-logo"><img src="images/header.png" alt="Revamp Logo" class="responsive-img rlogo"></a>
+		    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		    <ul class="right hide-on-med-and-down">
+		    	<li><a href="index.html">Home</a></li>
+		    	<li><a href="events.html">Events</a></li>
+		    	<li class="active"><a href="#">Register</a></li>
+		    	<li ><a href="rules.html">Rules</a></li>
+		    	<li><a href="team.html">Team</a></li>
+				<li><a href="contact.html">Contact</a></li>
+		    </ul>
+		    <ul class="side-nav" id="mobile-demo">
+		    	<li><a href="index.html">Home</a></li>
+		    	<li><a href="events.html">Events</a></li>
+		    	<li class="active"><a href="#">Register</a></li>
+		    	<li ><a href="rules.html">Rules</a></li>
+		    	<li><a href="team.html">Team</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				</ul>
+		  </div>
+		</nav>
+		
+		<!-- Main Content Starts Here -->
+		<div class="container">
+			<div class="row">
+				<h1 class="center-align">Register</h1>
+			</div>
+		</div>
+
+		<div class="container white" style="padding: 20px;">
+		<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="name" type="text" class="validate" required>
+          <label for="name">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="roll" type="number" class="validate" required>
+          <label for="roll">Roll Number</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s6">
+          <select id="branch">
+               <option>CSE</option>
+               <option>ME</option>
+               <option>Civil</option>
+               <option>EN</option>
+               <option>IT</option>
+               <option>EC</option>
+           </select>
+          <label for="branch">Branch</label>
+        </div>
+        <div class="input-field col s6">
+          <select id="year">
+               <option>First</option>
+               <option>Second</option>
+               <option>Third</option>
+               <option>Fourth</option>
+           </select>
+          <label>Year</label>
+        </div>
+      </div>
+   
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="email" type="email" class="validate" required>
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="phone" type="number" class="validate" required>
+          <label for="phone">Mobile Number</label>
+        </div>
+      </div>
+     
+      <div class="row">
+		<h3 class="center-align">Select Event Type</h3>
+		<hr>
+			<select id="eventtype">
+			 <option value="" disabled selected>Choose event type</option>
+			   <option value="cultural">Cultural</option>
+			   <option value="technical">Technical</option>
+			 </select>
+      </div>
+
+      <div class="row" id="events">
+      <!-- Solo Events -->
+      <div id="culturalevents" style="display: none;">
+		<div class="col s12 m6" id="culturalsolo">
+		<h3>SOLO</h3>
+	    	<p>
+		      <input type="checkbox" id="raag"/>
+		      <label for="raag">Raag - Singing Competition</label>
+	    	</p>
+	    	<p>
+		      <input type="checkbox" id="mirage"/>
+		      <label for="mirage">Mirage - Fashion Show</label>
+	    	</p>
+	    	<p>
+		      <input type="checkbox" id="hasya"/>
+		      <label for="hasya">Hasya Kavi</label>
+	    	</p>
+	    	<p>
+		      <input type="checkbox" id="natraj"/>
+		      <label for="natraj">Natraj - Solo Dance</label>
+	    	</p>
+	    	<p>
+		      <input type="checkbox" id="games"/>
+		      <label for="games">Games</label>
+	    	</p>
+		</div>
+		<!-- Group Events for cultural -->
+		<div class="col m6 s12" id="culturalgroup">
+		<h3>Group</h3>
+	    	<p>
+		      <input type="checkbox" id="banjo"/>
+		      <label for="banjo">Banjo - The Clash of Bands</label>
+	    	</p>
+	    	<div class="input-field col s12 " id="banjoform">
+	          <textarea id="banjotext" class="materialize-textarea"></textarea>
+	          <label for="banjotext">Enter Names of team members</label>
+	    	</div>
+
+	    	<p>
+		      <input type="checkbox" id="sargam"/>
+		      <label for="sargam">Sargam - Group Singing</label>
+	    	</p>
+	    	<div class="input-field col s12 " id="sargamform">
+	          <textarea id="sargamtext" class="materialize-textarea"></textarea>
+	          <label for="sargamtext">Enter Names of team members</label>
+	    	</div>
+	    	<p>
+		      <input type="checkbox" id="nritya"/>
+		      <label for="nritya">Nritya - Group Dance</label>
+	    	</p>
+	    	<div class="input-field col s12 " id="nrityaform">
+	          <textarea id="nrityatext" class="materialize-textarea"></textarea>
+	          <label for="nrityatext">Enter Names of team members</label>
+	    	</div>
+	    	<p>
+		      <input type="checkbox" id="manch"/>
+		      <label for="manch">Manch Tantra - Skit ompetition</label>
+	    	</p>
+	    	<div class="input-field col s12 " id="manchform">
+	          <textarea id="manchtext" class="materialize-textarea"></textarea>
+	          <label for="manchtext">Enter Names of team members</label>
+	    	</div>
+	    	<p>
+		      <input type="checkbox" id="gudgudi"/>
+		      <label for="gudgudi">Gudgudi - A comic act</label>
+	    	</p>
+	    	<div class="input-field col s12 " id="gudgudiform">
+	          <textarea id="gudguditext" class="materialize-textarea"></textarea>
+	          <label for="gudguditext">Enter Names of team members</label>
+	    	</div>
+	    	<p>
+		      <input type="checkbox" id="tamaasha"/>
+		      <label for="tamaasha">Tamaasha - Nukkad Natak</label>
+	    	</p>
+	    	<div class="input-field col s12 " id="tamaashaform">
+	          <textarea id="tamaashatext" class="materialize-textarea"></textarea>
+	          <label for="tamaashatext">Enter Names of team members</label>
+	    	</div>
+	    	<p>
+		      <input type="checkbox" id="filmy"/>
+		      <label for="filmy">Filmy Mukabala - Cine Quiz</label>
+	    	</p>
+	    	<div class="input-field col s12 " id="filmyform">
+	          <textarea id="filmytext" class="materialize-textarea"></textarea>
+	          <label for="filmytext">Enter Names of team members</label>
+	    	</div>
+	    	<p>
+		      <input type="checkbox" id="saregamapa"/>
+		      <label for="saregamapa">Sa Re Ga Ma Pa - Antakshri</label>
+	    	</p>
+	    	<div class="input-field col s12 " id="saregamapaform">
+	          <textarea id="saregamapatext" class="materialize-textarea"></textarea>
+	          <label for="saregamapatext">Enter Names of team members</label>
+	    	</div>
+	    	<p>
+		      <input type="checkbox" id="drishyam"/>
+		      <label for="drishyam">Drishyam - Mobile Movie Making</label>
+	    	</p>
+	    	<div class="input-field col s12 " id="drishyamform">
+	          <textarea id="drishyamtext" class="materialize-textarea"></textarea>
+	          <label for="drishyamtext">Enter Names of team members</label>
+	    	</div>
+	    	<p>
+		      <input type="checkbox" id="admad"/>
+		      <label for="admad">Ad Mad - Advertisement</label>
+	    	</p>
+	    	<div class="input-field col s12 " id="admadform">
+	          <textarea id="admadtext" class="materialize-textarea"></textarea>
+	          <label for="admadtext">Enter Names of team members</label>
+	    	</div>
+		</div>
+		</div>
+
+      	 <div id="technicalevents" class="col s12" style="display: none;">
+      	 	<p>
+      		      <input type="checkbox" id="quiz"/>
+      		      <label for="quiz">Technical Quiz</label>
+      	 	</p>
+      	 	<p>
+      		      <input type="checkbox" id="rag"/>
+      		      <label for="rag">Rags To Rich </label>
+      	 	</p>
+      	 	<p>
+      		      <input type="checkbox" id="bidding"/>
+      		      <label for="bidding">Bidding C Quiz</label>
+      	 	</p>
+      	 	<p>
+      		      <input type="checkbox" id="LAN"/>
+      		      <label for="LAN">LAN Games</label>
+      	 	</p>
+      	 	<p>
+      		      <input type="checkbox" id="hack"/>
+      		      <label for="hack">Hack Fest</label>
+      	 	</p>
+      	 	<p>
+      		      <input type="checkbox" id="robo"/>
+      		      <label for="robo">Robo Race</label>
+      	 	</p>
+      	 	<p>
+      		      <input type="checkbox" id="circuit"/>
+      		      <label for="circuit">Circuit Designing</label>
+      	 	</p>
+      	 	<p>
+      		      <input type="checkbox" id="code"/>
+      		      <label for="code">Code Debugging</label>
+      	 	</p>
+      	 	<p>
+      		      <input type="checkbox" id="web"/>
+      		      <label for="web">Web Developer</label>
+      	 	</p>
+      	 	<p>
+      		      <input type="checkbox" id="load"/>
+      		      <label for="load">Bear Your Load</label>
+      	 	</p>
+      	 	<p>
+      		      <input type="checkbox" id="auto"/>
+      		      <label for="auto">AUTO Cad</label>
+      	 	</p>
+      	 	<p>
+      		      <input type="checkbox" id="build"/>
+      		      <label for="build">Build a bridge</label>
+      	 	</p>
+      	 	<p>
+      		      <input type="checkbox" id="idea"/>
+      		      <label for="idea">Idea Presentation</label>
+      	 	</p>
+      	</div>
+		<center>	
+      	<button type="submit" class="btn-large teal submit">Register</button>
+      	</center>
+
+      </div>
+	
+	
+  	</div>
+  </div>
+
+		     
+	
+		 <footer class="page-footer footer">
+		    <div class="footer-copyright">
+		      <div class="container">
+		      <div class="row flow-text">
+		      	<div class="left-align" style="display: inline-block; font-size:14px;">Like us on
+				<a href="https://facebook.com/revamp2k17" target="_blank">Facebook @Revamp2k17</a>
+				</div>
+				<div class="center" style="display: inline-block; font-size:14px;">&nbsp 2017
+				<a href="https://facebook.com/krishnacollege" target="_blank">Krishna Engineering College</a>
+				</div>
+		      	
+		      	 <div style="display: inline-block; float: right; font-size:16px;">
+				Made By<a href="http://anujsh.com" target="_blank"> Anuj Sharma</a> &amp <a href="http://satishpadnani.com/my" target="_blank"> Satish Padnani</a>
+		      	 </div>
+		      	</div>
+		      </div>
+		    </div>
+		  </footer>
+
+	
+		<!-- Content Ends Here -->
+
+			<!--Import jQuery before materialize.js-->
+			<script type="text/javascript" src="js/jquery.min.js"></script>
+			<script type="text/javascript" src="js/materialize.min.js"></script>
+			<script type="text/javascript" src="js/custom.js"></script>
+			<script type="text/javascript" src="js/reg.js"></script>
+
+		</body>
+	</html>
